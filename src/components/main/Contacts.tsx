@@ -1,37 +1,43 @@
-import React, { useEffect } from "react";
-
-var nodemailer = require("nodemailer");
+import React, { useEffect, useRef } from "react";
+import Swal from 'sweetalert2'
+import emailjs from 'emailjs-com';
 
 function Contacts() {
-  var smtpTransport = nodemailer.createTransport({
-    host: "mail.smtp2go.com",
-    port: 2525, // 8025, 587 and 25 can also be used.
-    auth: {
-      user: "inboxgroup.ai",
-      pass: "w9uPJDBI7FVJ7a0C",
-    },
-  });
+  
+  const form:any = useRef();
 
-  useEffect(() => {
-    smtpTransport.sendMail(
-      {
-        from: "Sender Name<hello@makopolo.ai",
-        to: "doug.maposa@gmail.com",
-        subject: "Your Subject",
-        text: "It is a test message",
-        html: "It is a test message",
-      },
-      function (error: any, response: any) {
-        if (error) {
-          console.log(error);
-          alert(0)
-        } else {
-          console.log("Message sent: " + response.message);
-          alert(1)
-        }
-      }
-    );
-  }, []);
+  const sendEmail = (e:any) => {
+
+    Swal.showLoading();
+
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_50wup7o', 'template_xd110ki', form.current, 'aReJ648891wMprdJ3')
+      .then(
+        () => {
+          Swal.hideLoading();
+          console.log('SUCCESS!');
+          Swal.fire({
+            title: "Email sent!",
+            text: "Thank you, your email was sent. I will get back to you soon.",
+            icon: "success"
+          });
+
+          form.current.reset();
+
+        },
+        (error) => {
+          Swal.hideLoading();
+          console.log('FAILED...', error.text);
+          Swal.fire({
+            title: "Something went wrong!",
+            text: "Sorry there was an error sending your email. Please check your connection and try again",
+            icon: "error"
+          });
+        },
+      );
+  };
 
   return (
     <>
@@ -60,10 +66,6 @@ function Contacts() {
                   <span>Fullstack Developer</span>
                 </div>
                 <div className="description">
-                  <p>
-                    I am available for freelance work. Connect with me via
-                    linked inand call in to my account.
-                  </p>
                   <span className="phone">
                     Phone: <a href="tel:+263772128622">+263 77 212 8622</a>
                   </span>
@@ -116,15 +118,14 @@ function Contacts() {
                   <form
                     className="rnt-contact-form rwt-dynamic-form row"
                     id="contact-form"
-                    method="POST"
-                    action="https://rainbowit.net/html/inbio/mail.php"
+                    ref={form} onSubmit={sendEmail}
                   >
                     <div className="col-lg-6">
                       <div className="form-group">
                         <label htmlFor="contact-name">Your Name</label>
                         <input
                           className="form-control form-control-lg"
-                          name="contact-name"
+                          name="from_name"
                           id="contact-name"
                           type="text"
                         />
@@ -135,7 +136,7 @@ function Contacts() {
                         <label htmlFor="contact-phone">Phone Number</label>
                         <input
                           className="form-control"
-                          name="contact-phone"
+                          name="from_mobile"
                           id="contact-phone"
                           type="text"
                         />
@@ -147,7 +148,7 @@ function Contacts() {
                         <input
                           className="form-control form-control-sm"
                           id="contact-email"
-                          name="contact-email"
+                          name="from_email"
                           type="email"
                         />
                       </div>
@@ -167,7 +168,7 @@ function Contacts() {
                       <div className="form-group">
                         <label htmlFor="contact-message">Your Message</label>
                         <textarea
-                          name="contact-message"
+                          name="message"
                           id="contact-message"
                           cols={30}
                           rows={10}
