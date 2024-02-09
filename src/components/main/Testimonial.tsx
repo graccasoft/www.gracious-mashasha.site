@@ -1,853 +1,290 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function Testimonial() {
-  return <>
-    {/* Start Testimonia Area  */}
-    <div
-      className="rn-testimonial-area rn-section-gap section-separator"
-      id="testimonial"
-    >
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="section-title text-center">
-              <span className="subtitle">What Clients Say</span>
-              <h2 className="title">Testimonial</h2>
+  const [testmonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const testmonies: any = [
+      {
+        name: "Isheunesu Tsiga",
+        title: "Marketing / Copywriter",
+        text: "Douglas excelled as a contractor at Mambos Chicken, demonstrating expertise in React, MongoDB, FirebaseDB, MySQL, ExpressJS, NodeJS, and Redux. He developed user-friendly web apps, efficient back-end systems, and contributed significantly to our project’s success. Highly recommended.",
+        thumbnail:
+          "https://media.licdn.com/dms/image/D4E03AQEWMYupy4jdBg/profile-displayphoto-shrink_800_800/0/1696232420814?e=1712793600&v=beta&t=gTWOVmmP25xcb5iOJ9L_reZskRwHWtcIwKeMjevB4so",
+        service: "Website development",
+        date: "January 2024",
+        org: "Mambo's Chicken",
+      },
+      {
+        name: "Gracious Mashasha",
+        title: "FullStack Developer",
+        text: "Douglas is a skilled developer, excelling in complex projects and communication. He’s efficient, quality-focused, and great at explaining technical topics. His inspiring attitude motivates the team, making him an invaluable asset. Highly appreciated for his daily contributions.",
+        thumbnail:
+          "https://media.licdn.com/dms/image/C4D03AQHu-oSVfy6SUg/profile-displayphoto-shrink_800_800/0/1655325195801?e=1712793600&v=beta&t=6WXfgFEuYZFJT3DhhYmHeSMHcXUcNnocIc64SJmuekE",
+        service: "Website development",
+        date: "March 2023",
+        org: "Inbox Group AI",
+      },
+      {
+        name: "Munyaradzi T. Nkomo",
+        title: "Communication Specialist",
+        text: "Dedicated, committed and innovative individual. Douglas is a pleasure to work with. He is a techno-savvy person who understands technological trends and brings solutions to any project that he implements.",
+        thumbnail: "https://media.licdn.com/dms/image/C4D03AQH3eeI2Ns4IXw/profile-displayphoto-shrink_800_800/0/1654107313168?e=1712793600&v=beta&t=AR7rh399ns4FLCv1VKxVm-EPku8s7FcOEMoGI8rokqI",
+        service: "Website development",
+        date: "May 2022",
+        org: "World Vision",
+      },
+      {
+        name: "Chris Bosch",
+        title: "Business Development Specialist",
+        text: "Douglas, your work on the blockchain project was exceptional. Your expertise in smart contracts and dApps was evident in the quality of your work. Your problem-solving skills, dedication, and ability to work under pressure were commendable. You’re a valuable asset to any team.",
+        thumbnail: "https://media.licdn.com/dms/image/D4E03AQF8mUSSU-J2Dg/profile-displayphoto-shrink_800_800/0/1698674915783?e=1712793600&v=beta&t=-fQ6ByRJrBKvtAF4nki1MBZ3Joir8j1_yWwWlSGYHpg",
+        service: "Smart contract development",
+        date: "April 2022",
+        org: "Verseum, Proppy",
+      },
+      {
+        name: "Thomas K. Heller",
+        title: "CTO",
+        text: "Douglas, your work on the token development and token swap website project was truly remarkable. In just three months, you managed to design and implement a robust token system, and a user-friendly token swap website. Your understanding of blockchain technology and smart contracts was clearly demonstrated in the seamless operation of the token system. The website you developed not only had an intuitive interface, but also ensured secure and efficient token swaps. Your ability to deliver such a complex project in a short time frame speaks volumes about your skills, dedication, and work ethic. Your contributions were invaluable to the success of the project. You are indeed a top-tier blockchain developer.",
+        thumbnail: "https://img.freepik.com/premium-vector/empty-face-icon-avatar-with-black-hair-vector-illustration_601298-13402.jpg",
+        service: "DEX Development",
+        date: "April 2022",
+        org: "Swapps FInance",
+      },
+      {
+        name: "Jackiee Gwangwadza",
+        title: "Business Development Manager",
+        text: "Doug is brilliant as his work!, creative with very good conceptualisation skills.",
+        thumbnail:
+          "https://media.licdn.com/dms/image/D4D35AQHV1hFgkcyN5A/profile-framedphoto-shrink_800_800/0/1687238399032?e=1708106400&v=beta&t=97L6ynhSWdCPigvcxz2lmcQCgu67TIq-I6F0aDRmc2c",
+        service: "App development",
+        date: "August 2022",
+        org: "Premier Services Medical Investments",
+      },
+      {
+        name: "Hugh Vusani Mapuke",
+        title: "Marketing Coordinator",
+        text: 'I\'ve heard the pleasure of collaborating with Douglas on various projects over the past 10 years. Douglas is a highly creative, an attribute he shows "flamboyantly" in any challenge given to him. From UI/UX Design.',
+        thumbnail:
+          "https://img.freepik.com/premium-vector/empty-face-icon-avatar-with-black-hair-vector-illustration_601298-13402.jpg",
+        service: "App development",
+        date: "May 2022",
+        org: "ABC Auctions",
+      },
+      {
+        name: "Luckson Maisva",
+        title: "ICT Consultant",
+        text: "Douglas is a very creative designer and i recommend him for all illustrations that requires creativity and innovation",
+        thumbnail:
+          "https://img.freepik.com/premium-vector/empty-face-icon-avatar-with-black-hair-vector-illustration_601298-13402.jpg",
+        service: "Website development",
+        date: "May 2022",
+        org: "Freelance",
+      },
+    ];
+
+    setTestimonials(testmonies);
+  }, []);
+
+  return (
+    <>
+      {/* Start Testimonia Area  */}
+      <div
+        className="rn-testimonial-area rn-section-gap section-separator"
+        id="testimonial"
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <span className="subtitle">What Clients Say</span>
+                <h2 className="title">Testimonial</h2>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="testimonial-activation testimonial-pb mb--30 slick-initialized slick-slider slick-dotted">
-              <button className="slide-arrow prev-arrow slick-arrow" style={{}}>
-                <i className="feather-arrow-left" />
-              </button>
-              {/* Start Single testiminail */}
-              <div className="slick-list draggable" style={{ height: 522 }}>
-                <div
-                  className="slick-track"
-                  style={{
-                    opacity: 1,
-                    width: 12595,
-                    transform: "translate3d(-1145px, 0px, 0px)"
-                  }}
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="testimonial-activation testimonial-pb mb--30 slick-initialized slick-slider slick-dotted">
+                <button
+                  className="slide-arrow prev-arrow slick-arrow"
+                  style={{}}
                 >
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
-                    data-slick-index={-1}
-                    id=""
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
+                  <i className="feather-arrow-left" />
+                </button>
+                {/* Start Single testiminail */}
+                <div className="slick-list draggable" style={{ height: 600 }}>
+                  <Swiper autoplay
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                    onSlideChange={() => console.log("slide change")}
+                    onSwiper={(swiper: any) => console.log(swiper)}
                   >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--5th.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">Default name</span>
-                          <h3 className="title">Davei Luace</h3>
-                          <span className="designation">
-                            Chief Operating Manager
-                          </span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Development</h3>
-                            <span className="date">
-                              via Upwork - Mar 4, 2015 - Aug 30, 2021
-                            </span>
+                    {testmonials.map(
+                      (testmony: any, testimonyIndex: number) => (
+                        <SwiperSlide>
+                          <div className="slick-track">
+                            <div
+                              className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
+                              data-slick-index={-1}
+                              id=""
+                              aria-hidden="false"
+                              style={{ width: 1145 }}
+                              tabIndex={-1}
+                            >
+                              <div className="inner">
+                                <div className="card-info">
+                                  <div className="card-thumbnail">
+                                    <img
+                                      src={testmony.thumbnail}
+                                      alt="Testimonial-image"
+                                    />
+                                  </div>
+                                  <div className="card-content">
+                                    <span className="subtitle mt--10">
+                                      {testmony.org}
+                                    </span>
+                                    <h3 className="title">{testmony.name}</h3>
+                                    <span className="designation">
+                                      {testmony.title}
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="card-description">
+                                  <div className="title-area">
+                                    <div className="title-info">
+                                      <h3 className="title">
+                                        {testmony.service}
+                                      </h3>
+                                      <span className="date">
+                                        {testmony.date}
+                                      </span>
+                                    </div>
+                                    <div className="rating">
+                                      <img
+                                        src="/assets/images/rating.png"
+                                        alt="rating-image"
+                                      />
+                                      <img
+                                        src="/assets/images/rating.png"
+                                        alt="rating-image"
+                                      />
+                                      <img
+                                        src="/assets/images/rating.png"
+                                        alt="rating-image"
+                                      />
+                                      <img
+                                        src="/assets/images/rating.png"
+                                        alt="rating-image"
+                                      />
+                                      <img
+                                        src="/assets/images/rating.png"
+                                        alt="rating-image"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="seperator" />
+                                  <p className="discription">{testmony.text}</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          When managment is so important. Ut tincidunt est ac
-                          dolor aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-current slick-active"
-                    data-slick-index={0}
-                    aria-hidden="false"
-                    style={{ width: 1145 }}
-                    tabIndex={0}
-                    role="tabpanel"
-                    id="slick-slide00"
-                    aria-describedby="slick-slide-control00"
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--1st.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">
-                            Rainbow-Themes
-                          </span>
-                          <h3 className="title">Nevine Acotanza</h3>
-                          <span className="designation">
-                            Chief Operating Officer
-                          </span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Development</h3>
-                            <span className="date">
-                              via Upwork - Mar 4, 2015 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          Maecenas finibus nec sem ut imperdiet. Ut tincidunt
-                          est ac dolor aliquam sodales. Phasellus sed mauris
-                          hendrerit, laoreet sem in, lobortis mauris hendrerit
-                          ante. Ut tincidunt est ac dolor aliquam sodales
-                          phasellus smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide"
-                    data-slick-index={1}
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                    role="tabpanel"
-                    id="slick-slide01"
-                    aria-describedby="slick-slide-control01"
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--2nd.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">
-                            Bound - Trolola
-                          </span>
-                          <h3 className="title">Jone Duone Joe</h3>
-                          <span className="designation">Operating Officer</span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Web App Development</h3>
-                            <span className="date">
-                              Upwork - Mar 4, 2016 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          Important fact to nec sem ut imperdiet. Ut tincidunt
-                          est ac dolor aliquam sodales. Phasellus sed mauris
-                          hendrerit, laoreet sem in, lobortis mauris hendrerit
-                          ante. Ut tincidunt est ac dolor aliquam sodales
-                          phasellus smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide"
-                    data-slick-index={2}
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                    role="tabpanel"
-                    id="slick-slide02"
-                    aria-describedby="slick-slide-control02"
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--3rd.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">Glassfisom</span>
-                          <h3 className="title">Nevine Dhawan</h3>
-                          <span className="designation">CEO Of Officer</span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Design</h3>
-                            <span className="date">
-                              Fiver - Mar 4, 2015 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          No more question for design. Ut tincidunt est ac dolor
-                          aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide"
-                    data-slick-index={3}
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                    role="tabpanel"
-                    id="slick-slide03"
-                    aria-describedby="slick-slide-control03"
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--4th.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">NCD - Design</span>
-                          <h3 className="title">Mevine Thoda</h3>
-                          <span className="designation">Marketing Officer</span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">CEO - Marketing</h3>
-                            <span className="date">
-                              Thoda Department - Mar 4, 2018 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          Marcent Of Vanice and treatment. Ut tincidunt est ac
-                          dolor aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide"
-                    data-slick-index={4}
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                    role="tabpanel"
-                    id="slick-slide04"
-                    aria-describedby="slick-slide-control04"
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--5th.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">Default name</span>
-                          <h3 className="title">Davei Luace</h3>
-                          <span className="designation">
-                            Chief Operating Manager
-                          </span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Development</h3>
-                            <span className="date">
-                              via Upwork - Mar 4, 2015 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          When managment is so important. Ut tincidunt est ac
-                          dolor aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
-                    data-slick-index={5}
-                    id=""
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--1st.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">
-                            Rainbow-Themes
-                          </span>
-                          <h3 className="title">Nevine Acotanza</h3>
-                          <span className="designation">
-                            Chief Operating Officer
-                          </span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Development</h3>
-                            <span className="date">
-                              via Upwork - Mar 4, 2015 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          Maecenas finibus nec sem ut imperdiet. Ut tincidunt
-                          est ac dolor aliquam sodales. Phasellus sed mauris
-                          hendrerit, laoreet sem in, lobortis mauris hendrerit
-                          ante. Ut tincidunt est ac dolor aliquam sodales
-                          phasellus smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
-                    data-slick-index={6}
-                    id=""
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--2nd.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">
-                            Bound - Trolola
-                          </span>
-                          <h3 className="title">Jone Duone Joe</h3>
-                          <span className="designation">Operating Officer</span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Web App Development</h3>
-                            <span className="date">
-                              Upwork - Mar 4, 2016 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          Important fact to nec sem ut imperdiet. Ut tincidunt
-                          est ac dolor aliquam sodales. Phasellus sed mauris
-                          hendrerit, laoreet sem in, lobortis mauris hendrerit
-                          ante. Ut tincidunt est ac dolor aliquam sodales
-                          phasellus smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
-                    data-slick-index={7}
-                    id=""
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--3rd.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">Glassfisom</span>
-                          <h3 className="title">Nevine Dhawan</h3>
-                          <span className="designation">CEO Of Officer</span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Design</h3>
-                            <span className="date">
-                              Fiver - Mar 4, 2015 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          No more question for design. Ut tincidunt est ac dolor
-                          aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
-                    data-slick-index={8}
-                    id=""
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--4th.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">NCD - Design</span>
-                          <h3 className="title">Mevine Thoda</h3>
-                          <span className="designation">Marketing Officer</span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">CEO - Marketing</h3>
-                            <span className="date">
-                              Thoda Department - Mar 4, 2018 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          Marcent Of Vanice and treatment. Ut tincidunt est ac
-                          dolor aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
-                    data-slick-index={9}
-                    id=""
-                    aria-hidden="true"
-                    style={{ width: 1145 }}
-                    tabIndex={-1}
-                  >
-                    <div className="inner">
-                      <div className="card-info">
-                        <div className="card-thumbnail">
-                          <img
-                            src="/assets/images/final-home--5th.png"
-                            alt="Testimonial-image"
-                          />
-                        </div>
-                        <div className="card-content">
-                          <span className="subtitle mt--10">Default name</span>
-                          <h3 className="title">Davei Luace</h3>
-                          <span className="designation">
-                            Chief Operating Manager
-                          </span>
-                        </div>
-                      </div>
-                      <div className="card-description">
-                        <div className="title-area">
-                          <div className="title-info">
-                            <h3 className="title">Android App Development</h3>
-                            <span className="date">
-                              via Upwork - Mar 4, 2015 - Aug 30, 2021
-                            </span>
-                          </div>
-                          <div className="rating">
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                            <img
-                              src="/assets/images/rating.png"
-                              alt="rating-image"
-                            />
-                          </div>
-                        </div>
-                        <div className="seperator" />
-                        <p className="discription">
-                          When managment is so important. Ut tincidunt est ac
-                          dolor aliquam sodales. Phasellus sed mauris hendrerit,
-                          laoreet sem in, lobortis mauris hendrerit ante. Ut
-                          tincidunt est ac dolor aliquam sodales phasellus
-                          smauris .
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                        </SwiperSlide>
+                      )
+                    )}
+                  </Swiper>
                 </div>
+                {/*End Single testiminail */}
+                <button
+                  className="slide-arrow next-arrow slick-arrow"
+                  style={{}}
+                >
+                  <i className="feather-arrow-right" />
+                </button>
+                <ul className="slick-dots" style={{}} role="tablist">
+                  <li className="slick-active" role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control00"
+                      aria-controls="slick-slide00"
+                      aria-label="1 of 5"
+                      tabIndex={0}
+                      aria-selected="true"
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control01"
+                      aria-controls="slick-slide01"
+                      aria-label="2 of 5"
+                      tabIndex={-1}
+                    >
+                      2
+                    </button>
+                  </li>
+                  <li role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control02"
+                      aria-controls="slick-slide02"
+                      aria-label="3 of 5"
+                      tabIndex={-1}
+                    >
+                      3
+                    </button>
+                  </li>
+                  <li role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control03"
+                      aria-controls="slick-slide03"
+                      aria-label="4 of 5"
+                      tabIndex={-1}
+                    >
+                      4
+                    </button>
+                  </li>
+                  <li role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control04"
+                      aria-controls="slick-slide04"
+                      aria-label="5 of 5"
+                      tabIndex={-1}
+                    >
+                      5
+                    </button>
+                  </li>
+                </ul>
               </div>
-              {/*End Single testiminail */}
-              {/* Start Single testiminail */}
-              {/*End Single testiminail */}
-              {/* Start Single testiminail */}
-              {/*End Single testiminail */}
-              {/* Start Single testiminail */}
-              {/*End Single testiminail */}
-              {/* Start Single testiminail */}
-              {/*End Single testiminail */}
-              <button className="slide-arrow next-arrow slick-arrow" style={{}}>
-                <i className="feather-arrow-right" />
-              </button>
-              <ul className="slick-dots" style={{}} role="tablist">
-                <li className="slick-active" role="presentation">
-                  <button
-                    type="button"
-                    role="tab"
-                    id="slick-slide-control00"
-                    aria-controls="slick-slide00"
-                    aria-label="1 of 5"
-                    tabIndex={0}
-                    aria-selected="true"
-                  >
-                    1
-                  </button>
-                </li>
-                <li role="presentation">
-                  <button
-                    type="button"
-                    role="tab"
-                    id="slick-slide-control01"
-                    aria-controls="slick-slide01"
-                    aria-label="2 of 5"
-                    tabIndex={-1}
-                  >
-                    2
-                  </button>
-                </li>
-                <li role="presentation">
-                  <button
-                    type="button"
-                    role="tab"
-                    id="slick-slide-control02"
-                    aria-controls="slick-slide02"
-                    aria-label="3 of 5"
-                    tabIndex={-1}
-                  >
-                    3
-                  </button>
-                </li>
-                <li role="presentation">
-                  <button
-                    type="button"
-                    role="tab"
-                    id="slick-slide-control03"
-                    aria-controls="slick-slide03"
-                    aria-label="4 of 5"
-                    tabIndex={-1}
-                  >
-                    4
-                  </button>
-                </li>
-                <li role="presentation">
-                  <button
-                    type="button"
-                    role="tab"
-                    id="slick-slide-control04"
-                    aria-controls="slick-slide04"
-                    aria-label="5 of 5"
-                    tabIndex={-1}
-                  >
-                    5
-                  </button>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    {/* End Testimonial Area  */}
-  </>;
+      {/* End Testimonial Area  */}
+    </>
+  );
 }
 
 export default Testimonial;

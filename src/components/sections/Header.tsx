@@ -34,7 +34,7 @@ function Header() {
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#features">
-                      Features
+                      Services
                     </a>
                   </li>
                   <li className="nav-item">
@@ -48,16 +48,16 @@ function Header() {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="http://localhost:3000/#clients"
-                    >
-                      Clients
+                    <a className="nav-link" href="#testimonial">
+                      Testimonials
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#pricing">
-                      Pricing
+                    <a
+                      className="nav-link"
+                      href="#clients"
+                    >
+                      Skills
                     </a>
                   </li>
                   <li className="nav-item">
@@ -67,7 +67,7 @@ function Header() {
                   </li>
                   <li className="nav-item current">
                     <a className="nav-link" href="#contacts">
-                      Contact
+                      Contacts
                     </a>
                   </li>
                 </ul>
