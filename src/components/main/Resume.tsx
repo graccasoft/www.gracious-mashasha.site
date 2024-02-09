@@ -1,6 +1,87 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Resume() {
+
+  const [education, setEducation] = useState([]);
+
+  useEffect(()=>{
+
+    const courses:any = [
+      {
+        name: "Master's Degree in Computer Science : (MC-CS) STUDENT",
+        grade: "...",
+        college: "Colorado Boulder State University",
+        years: "Jan 2024 - Dec 2025",
+        description: "I am currently pursuing an online M.S. in Computer Science from Colorado Boulder State University, where I am learning about cutting-edge research and applications in various domains in the computing industry."
+      },
+      {
+        name: "Bsc Honors Degree in Information Technology",
+        grade: "2.1",
+        college: "Midlands State University",
+        years: "Aug 2008 - Jun 2012",
+        description: "I have a BSc Honors degree in Information Technology, where I acquired skills in computing, applications development, scripting, web development, database design, network administration, cyber security, and human-computer interaction."
+      },
+      {
+        name: "Advanced Diploma - Information Technology",
+        grade: "Pass",
+        college: "Satra Learning Centre",
+        years: "Aug 2008 - Jun 2012",
+        description: "With an Advanced Diploma in Information Technology, I gained skills in programming, web development, database management, network administration, cyber security, and project management."
+      },
+    ]
+
+    setEducation(courses);
+
+    
+  },[])
+
+  const [professional, setProfessional] = useState([]);
+
+  useEffect(()=>{
+
+    const jobs:any = [
+      {
+        name: "Fullstack Web3.0 Engineer",
+        grade: "2 yrs",
+        org: "Dovellous Technologies",
+        years: "Nov 2021 - Present",
+        description: "As a smart contract and dApp developer, I design, code, and deploy secure and efficient smart contracts for various use cases. I also integrate them with existing DeFi protocols and platforms, and build user-friendly dApps that enable token swaps, staking, and voting. I stay updated on the latest Web3 technologies and trends, and explore novel approaches to token engineering and mechanism design. I also engage with the crypto and DeFi community, and participate in forums, conferences, and meetups. I provide technical support and guidance to users."
+      }, 
+      {
+        name: "Fullstack Blockchain Developer",
+        grade: "3 mon",
+        org: "Swapps Finance",
+        years: "Sep 2021 - Dec 2021",
+        description: "In my work, I focus on three main areas. Firstly, I design, develop, and deploy secure and efficient smart contracts on blockchain networks, ensuring their correctness and integrating token swap functionality. Secondly, I build decentralized applications (dApps) that interact with these blockchain networks. This involves integrating token swap features and working closely with front-end developers to create user-friendly interfaces. Lastly, I manage liquidity pools for token swaps, optimising the provision and utilisation of liquidity, and monitoring the health of these liquidity pools. This comprehensive approach allows me to provide a seamless and secure experience for users interacting with blockchain technology."
+      }, 
+      {
+        name: "Fullstack Engineer",
+        grade: "3 yrs",
+        org: "Inbox Group",
+        years: "Jul 2018 - Sept 2021",
+        description: "As a developer, I create features with React.js, manage databases, implement DevOps, and build mobile apps. I also lead teams, coordinate projects, and provide feedback. I strive for robustness, usability, and reliability in all my work."
+      }, 
+      {
+        name: "Principal Software Engineer",
+        grade: "5 yrs",
+        org: "Appdev (Pvt) Ltd",
+        years: "Jan 2013 - Jul 2018",
+        description: "I lead a team of developers, manage projects, create UI prototypes, develop UI/UX, and handle frontend and backend systems. I’m involved in the product lifecycle, deploy apps on cloud services, and guide UI/UX trends."
+      }, 
+      {
+        name: "Graphic & Web Designer",
+        grade: "4 mon",
+        org: "Pixelus Design Lab",
+        years: "Sep 2012 - Dec 2012",
+        description: "I design websites, online and desktop apps, assess setup requirements, and implement solutions. I train teams in Adobe CS, win clients with high-quality design work, train clients in website maintenance, and initiated an ISP changeover."
+      }, 
+    ]
+
+    setProfessional(jobs);
+
+    
+  },[])
+
   return <>
     {/* Start Resume Area */}
     <div
@@ -11,7 +92,7 @@ function Resume() {
         <div className="row">
           <div className="col-lg-12">
             <div className="section-title text-center">
-              <span className="subtitle">7+ Years of Experience</span>
+              <span className="subtitle">10+ Years of Experience</span>
               <h2 className="title">My Resume</h2>
             </div>
           </div>
@@ -21,13 +102,13 @@ function Resume() {
             <ul className="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
               <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className="nav-link active"
                   id="education-tab"
                   data-bs-toggle="tab"
                   href="#education"
                   role="tab"
                   aria-controls="education"
-                  aria-selected="false"
+                  aria-selected="true"
                 >
                   education
                 </a>
@@ -45,851 +126,106 @@ function Resume() {
                   professional Skills
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  id="experience-tab"
-                  data-bs-toggle="tab"
-                  href="#experience"
-                  role="tab"
-                  aria-controls="experience"
-                  aria-selected="false"
-                >
-                  experience
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  id="interview-tab"
-                  data-bs-toggle="tab"
-                  href="#interview"
-                  role="tab"
-                  aria-controls="interview"
-                  aria-selected="true"
-                >
-                  interview
-                </a>
-              </li>
+              <li className="nav-item"></li>
+              <li className="nav-item"></li>
             </ul>
             {/* Start Tab Content Wrapper  */}
             <div className="rn-nav-content tab-content" id="myTabContents">
+
               {/* Start Single Tab  */}
               <div
-                className="tab-pane fade single-tab-area"
+                className="tab-pane fade active show single-tab-area"
                 id="education"
                 role="tabpanel"
                 aria-labelledby="education-tab"
               >
                 <div className="personal-experience-inner mt--40">
                   <div className="row">
+                    
                     {/* Start Skill List Area  */}
+                    <div className="col-lg-3 col-md-12 col-12"></div>
                     <div className="col-lg-6 col-md-12 col-12">
                       <div className="content">
-                        <span className="subtitle">2007 - 2010</span>
-                        <h4 className="maintitle">Education Quality</h4>
+                        <span className="subtitle">2005 - 2024</span>
+                        <h4 className="maintitle">Education </h4>
                         <div className="experience-list">
+                          { education.map((course:any, courseIndex:number)=>(
+                            <>
                           {/* Start Single List  */}
-                          <div className="resume-single-list">
+                          <div key={courseIndex} className="resume-single-list">
                             <div className="inner">
                               <div className="heading">
                                 <div className="title">
-                                  <h4>Personal Portfolio April Fools</h4>
-                                  <span>University of DVI (1997 - 2001)</span>
+                                  <h4>{course.name}</h4>
+                                  <span>{course.college} ⚪ {course.years}</span>
                                 </div>
                                 <div className="date-of-time">
-                                  <span>4.30/5</span>
+                                  <span>{course.grade}</span>
                                 </div>
                               </div>
-                              <p className="description">
-                                The education should be very interactual. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
+                              <p className="description" dangerouslySetInnerHTML={{__html: course.description}}></p>
                             </div>
                           </div>
                           {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Examples Of Personal Portfolio</h4>
-                                  <span>College of Studies (2000 - 2002)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.50/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Maecenas finibus nec sem ut imperdiet. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Tips For Personal Portfolio</h4>
-                                  <span>
-                                    University of Studies (1997 - 2001)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.80/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                If you are going to use a passage. Ut tincidunt
-                                est ac dolor aliquam sodales. Phasellus sed
-                                mauris hendrerit, laoreet sem in, lobortis
-                                mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
+                          </>
+                          ))}
                         </div>
                       </div>
                     </div>
-                    {/* End Skill List Area  */}
-                    {/* Start Skill List Area 2nd  */}
-                    <div className="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                      <div className="content">
-                        <span className="subtitle">2007 - 2010</span>
-                        <h4 className="maintitle">Job Experience</h4>
-                        <div className="experience-list">
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Diploma in Web Development</h4>
-                                  <span>BSE In CSE (2004 - 2008)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.70/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Contrary to popular belief. Ut tincidunt est ac
-                                dolor aliquam sodales. Phasellus sed mauris
-                                hendrerit, laoreet sem in, lobortis mauris
-                                hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>The Personal Portfolio Mystery</h4>
-                                  <span>
-                                    Job at Rainbow-Themes (2008 - 2016)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.95/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Generate Lorem Ipsum which looks. Ut tincidunt
-                                est ac dolor aliquam sodales. Phasellus sed
-                                mauris hendrerit, laoreet sem in, lobortis
-                                mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Diploma in Computer Science</h4>
-                                  <span>
-                                    Works at Plugin Development (2016 - 2020)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>5.00/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Maecenas finibus nec sem ut imperdiet. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                        </div>
-                      </div>
-                    </div>
+                    <div className="col-lg-3 col-md-12 col-12"></div>
                     {/* End Skill List Area  */}
                   </div>
                 </div>
               </div>
               {/* End Single Tab  */}
+
               {/* Start Single Tab  */}
               <div
-                className="tab-pane fade"
+                className="tab-pane fade single-tab-area"
                 id="professional"
                 role="tabpanel"
                 aria-labelledby="professional-tab"
               >
                 <div className="personal-experience-inner mt--40">
-                  <div className="row row--40">
-                    {/* Start Single Progressbar  */}
-                    <div className="col-lg-6 col-md-6 col-12">
-                      <div className="progress-wrapper">
-                        <div className="content">
-                          <span className="subtitle">Features</span>
-                          <h4 className="maintitle">Design Skill</h4>
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">PHOTOSHOT</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft"
-                                data-wow-duration="0.5s"
-                                data-wow-delay=".3s"
-                                role="progressbar"
-                                style={{
-                                  width: "100%",
-                                  visibility: "visible",
-                                  animationDuration: "0.5s",
-                                  animationDelay: "0.3s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">100%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">FIGMA</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft"
-                                data-wow-duration="0.6s"
-                                data-wow-delay=".4s"
-                                role="progressbar"
-                                style={{
-                                  width: "95%",
-                                  visibility: "visible",
-                                  animationDuration: "0.6s",
-                                  animationDelay: "0.4s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">95%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">ADOBE XD</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft"
-                                data-wow-duration="0.7s"
-                                data-wow-delay=".5s"
-                                role="progressbar"
-                                style={{
-                                  width: "60%",
-                                  visibility: "visible",
-                                  animationDuration: "0.7s",
-                                  animationDelay: "0.5s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">60%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">
-                              ADOBE ILLUSTRATOR
-                            </h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft animated"
-                                data-wow-duration="0.8s"
-                                data-wow-delay=".6s"
-                                role="progressbar"
-                                style={{
-                                  width: "70%",
-                                  visibility: "visible",
-                                  animationDuration: "0.8s",
-                                  animationDelay: "0.6s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">70%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">DESIGN</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft animated"
-                                data-wow-duration="0.9s"
-                                data-wow-delay=".7s"
-                                role="progressbar"
-                                style={{
-                                  width: "90%",
-                                  visibility: "visible",
-                                  animationDuration: "0.9s",
-                                  animationDelay: "0.7s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">90%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Single Progressbar  */}
-                    {/* Start Single Progressbar  */}
-                    <div className="col-lg-6 col-md-6 col-12 mt_sm--60">
-                      <div className="progress-wrapper">
-                        <div className="content">
-                          <span className="subtitle">Features</span>
-                          <h4 className="maintitle">Development Skill</h4>
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">HTML</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft"
-                                data-wow-duration="0.5s"
-                                data-wow-delay=".3s"
-                                role="progressbar"
-                                style={{
-                                  width: "85%",
-                                  visibility: "visible",
-                                  animationDuration: "0.5s",
-                                  animationDelay: "0.3s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">85%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">CSS</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft"
-                                data-wow-duration="0.6s"
-                                data-wow-delay=".4s"
-                                role="progressbar"
-                                style={{
-                                  width: "80%",
-                                  visibility: "visible",
-                                  animationDuration: "0.6s",
-                                  animationDelay: "0.4s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">80%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">JAVASCRIPT</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft"
-                                data-wow-duration="0.7s"
-                                data-wow-delay=".5s"
-                                role="progressbar"
-                                style={{
-                                  width: "90%",
-                                  visibility: "visible",
-                                  animationDuration: "0.7s",
-                                  animationDelay: "0.5s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">90%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">SOFTWARE</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft animated"
-                                data-wow-duration="0.8s"
-                                data-wow-delay=".6s"
-                                role="progressbar"
-                                style={{
-                                  width: "75%",
-                                  visibility: "visible",
-                                  animationDuration: "0.8s",
-                                  animationDelay: "0.6s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">75%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                          {/* Start Single Progress Charts */}
-                          <div className="progress-charts">
-                            <h6 className="heading heading-h6">PLUGIN</h6>
-                            <div className="progress">
-                              <div
-                                className="progress-bar wow fadeInLeft animated"
-                                data-wow-duration="0.9s"
-                                data-wow-delay=".7s"
-                                role="progressbar"
-                                style={{
-                                  width: "70%",
-                                  visibility: "visible",
-                                  animationDuration: "0.9s",
-                                  animationDelay: "0.7s",
-                                  animationName: "fadeInLeft"
-                                }}
-                                aria-valuenow={85}
-                                aria-valuemin={0}
-                                aria-valuemax={100}
-                              >
-                                <span className="percent-label">70%</span>
-                              </div>
-                            </div>
-                          </div>
-                          {/* End Single Progress Charts */}
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Single Progressbar  */}
-                  </div>
-                </div>
-              </div>
-              {/* End Single Tab  */}
-              {/* Start Single Tab  */}
-              <div
-                className="tab-pane fade"
-                id="experience"
-                role="tabpanel"
-                aria-labelledby="experience-tab"
-              >
-                <div className="personal-experience-inner mt--40">
                   <div className="row">
+                    
                     {/* Start Skill List Area  */}
+                    <div className="col-lg-3 col-md-12 col-12"></div>
                     <div className="col-lg-6 col-md-12 col-12">
                       <div className="content">
-                        <span className="subtitle">2007 - 2010</span>
-                        <h4 className="maintitle">Education Quality</h4>
+                        <span className="subtitle">2012 - 2024</span>
+                        <h4 className="maintitle">Professional Experience </h4>
                         <div className="experience-list">
+                          { professional.map((job:any, jobIndex:number)=>(
+                            <>
                           {/* Start Single List  */}
-                          <div className="resume-single-list">
+                          <div key={jobIndex} className="resume-single-list">
                             <div className="inner">
                               <div className="heading">
                                 <div className="title">
-                                  <h4>Personal Portfolio April Fools</h4>
-                                  <span>University of DVI (1997 - 2001)</span>
+                                  <h4>{job.name}</h4>
+                                  <span>{job.org} ⚪ {job.years}</span>
                                 </div>
                                 <div className="date-of-time">
-                                  <span>4.30/5</span>
+                                  <span>{job.grade}</span>
                                 </div>
                               </div>
-                              <p className="description">
-                                The education should be very interactual. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
+                              <p className="description" dangerouslySetInnerHTML={{__html: job.description}}></p>
                             </div>
                           </div>
                           {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Examples Of Personal Portfolio</h4>
-                                  <span>College of Studies (2000 - 2002)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.50/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Maecenas finibus nec sem ut imperdiet. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Tips For Personal Portfolio</h4>
-                                  <span>
-                                    University of Studies (1997 - 2001)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.80/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                If you are going to use a passage. Ut tincidunt
-                                est ac dolor aliquam sodales. Phasellus sed
-                                mauris hendrerit, laoreet sem in, lobortis
-                                mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
+                          </>
+                          ))}
                         </div>
                       </div>
                     </div>
-                    {/* End Skill List Area  */}
-                    {/* Start Skill List Area 2nd  */}
-                    <div className="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                      <div className="content">
-                        <span className="subtitle">2007 - 2010</span>
-                        <h4 className="maintitle">Job Experience</h4>
-                        <div className="experience-list">
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Diploma in Web Development</h4>
-                                  <span>BSE In CSE (2004 - 2008)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.70/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Contrary to popular belief. Ut tincidunt est ac
-                                dolor aliquam sodales. Phasellus sed mauris
-                                hendrerit, laoreet sem in, lobortis mauris
-                                hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>The Personal Portfolio Mystery</h4>
-                                  <span>
-                                    Job at Rainbow-Themes (2008 - 2016)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.95/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Generate Lorem Ipsum which looks. Ut tincidunt
-                                est ac dolor aliquam sodales. Phasellus sed
-                                mauris hendrerit, laoreet sem in, lobortis
-                                mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Diploma in Computer Science</h4>
-                                  <span>
-                                    Works at Plugin Development (2016 - 2020)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>5.00/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Maecenas finibus nec sem ut imperdiet. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                        </div>
-                      </div>
-                    </div>
+                    <div className="col-lg-3 col-md-12 col-12"></div>
                     {/* End Skill List Area  */}
                   </div>
                 </div>
               </div>
               {/* End Single Tab  */}
-              {/* Start Single Tab  */}
-              <div
-                className="tab-pane fade active show"
-                id="interview"
-                role="tabpanel"
-                aria-labelledby="interview-tab"
-              >
-                <div className="personal-experience-inner mt--40">
-                  <div className="row">
-                    {/* Start Skill List Area  */}
-                    <div className="col-lg-6 col-md-12 col-12">
-                      <div className="content">
-                        <span className="subtitle">2007 - 2010</span>
-                        <h4 className="maintitle">Company Experience</h4>
-                        <div className="experience-list">
-                          {/* Start Single List  */}
-                          <div
-                            data-aos="fade-up"
-                            data-aos-duration={500}
-                            data-aos-delay={300}
-                            data-aos-once="true"
-                            className="resume-single-list aos-init aos-animate"
-                          >
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Personal Portfolio April Fools</h4>
-                                  <span>University of DVI (1997 - 2001)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.30/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                The education should be very interactual. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div
-                            data-aos="fade-up"
-                            data-aos-duration={500}
-                            data-aos-delay={500}
-                            data-aos-once="true"
-                            className="resume-single-list aos-init aos-animate"
-                          >
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Examples Of Personal Portfolio</h4>
-                                  <span>College of Studies (2000 - 2002)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.50/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Maecenas finibus nec sem ut imperdiet. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div
-                            data-aos="fade-up"
-                            data-aos-duration={500}
-                            data-aos-delay={700}
-                            data-aos-once="true"
-                            className="resume-single-list aos-init aos-animate"
-                          >
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Tips For Personal Portfolio</h4>
-                                  <span>
-                                    University of Studies (1997 - 2001)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.80/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                If you are going to use a passage. Ut tincidunt
-                                est ac dolor aliquam sodales. Phasellus sed
-                                mauris hendrerit, laoreet sem in, lobortis
-                                mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Skill List Area  */}
-                    {/* Start Skill List Area 2nd  */}
-                    <div className="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                      <div className="content">
-                        <span className="subtitle">2007 - 2010</span>
-                        <h4 className="maintitle">Job Experience</h4>
-                        <div className="experience-list">
-                          {/* Start Single List  */}
-                          <div
-                            data-aos="fade-up"
-                            data-aos-duration={500}
-                            data-aos-delay={500}
-                            data-aos-once="true"
-                            className="resume-single-list aos-init aos-animate"
-                          >
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Diploma in Web Development</h4>
-                                  <span>BSE In CSE (2004 - 2008)</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.70/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Contrary to popular belief. Ut tincidunt est ac
-                                dolor aliquam sodales. Phasellus sed mauris
-                                hendrerit, laoreet sem in, lobortis mauris
-                                hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div
-                            data-aos="fade-up"
-                            data-aos-duration={500}
-                            data-aos-delay={700}
-                            data-aos-once="true"
-                            className="resume-single-list aos-init aos-animate"
-                          >
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>The Personal Portfolio Mystery</h4>
-                                  <span>
-                                    Job at Rainbow-Themes (2008 - 2016)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>4.95/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Generate Lorem Ipsum which looks. Ut tincidunt
-                                est ac dolor aliquam sodales. Phasellus sed
-                                mauris hendrerit, laoreet sem in, lobortis
-                                mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          {/* Start Single List  */}
-                          <div
-                            data-aos="fade-up"
-                            data-aos-duration={500}
-                            data-aos-delay={900}
-                            data-aos-once="true"
-                            className="resume-single-list aos-init aos-animate"
-                          >
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>Diploma in Computer Science</h4>
-                                  <span>
-                                    Works at Plugin Development (2016 - 2020)
-                                  </span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>5.00/5</span>
-                                </div>
-                              </div>
-                              <p className="description">
-                                Maecenas finibus nec sem ut imperdiet. Ut
-                                tincidunt est ac dolor aliquam sodales.
-                                Phasellus sed mauris hendrerit, laoreet sem in,
-                                lobortis mauris hendrerit ante.
-                              </p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Skill List Area  */}
-                  </div>
-                </div>
-              </div>
-              {/* End Single Tab  */}
+
             </div>
           </div>
         </div>

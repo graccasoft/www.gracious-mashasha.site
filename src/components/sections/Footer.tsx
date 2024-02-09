@@ -10,17 +10,14 @@ function Footer() {
             <div className="col-lg-12">
               <div className="footer-area text-center">
                 <div className="logo">
-                  <a href="https://rainbowit.net/html/inbio/index.html">
+                  <a href="#top">
                     <img src="/assets/images/logo-vertical.png" alt="logo" />
                   </a>
                 </div>
                 <p className="description mt--30">
-                  © 2022. All rights reserved by
-                  <a
-                    target="_blank"
-                    href="https://themeforest.net/user/rainbow-themes/portfolio"
-                  >
-                    Rainbow-Themes.
+                  © 2024. All rights reserved. 
+                  <a rel="noreferer" target="_blank" href="https://www.linkedin.com/in/douglasmaposa/" >
+                    {" "}Douglas Maposa
                   </a>
                 </p>
               </div>
