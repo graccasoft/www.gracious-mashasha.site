@@ -28,7 +28,7 @@ function Header() {
                 {/* Start Mainmanu Nav */}
                 <ul className="primary-menu nav nav-pills">
                   <li className="nav-item current">
-                    <a className="nav-link" href="#home">
+                    <a className="nav-link" href="#top">
                       Home
                     </a>
                   </li>

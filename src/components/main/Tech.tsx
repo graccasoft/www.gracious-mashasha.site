@@ -377,7 +377,7 @@ function Tech() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="section-title">
+              <div className="section-title text-center">
                 <span className="subtitle">Technology Stack</span>
                 <h2 className="title">Skills</h2>
               </div>

@@ -11,7 +11,7 @@ function Services() {
         <div className="row">
           <div className="col-lg-12">
             <div
-              className="section-title text-left aos-init aos-animate"
+              className="section-title text-center aos-init aos-animate"
               data-aos="fade-up"
               data-aos-duration={500}
               data-aos-delay={100}

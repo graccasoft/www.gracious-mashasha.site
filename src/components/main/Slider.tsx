@@ -9,11 +9,9 @@ function Slider() {
   }, [])
   return <>
     {/* Start Slider Area */}
-    <div className="cs-hero cs-style1 cs-type2" id="home">
-      <div className="cs-hero_bg cs-bg cs-ripple_version cs-center" data-src="/assets/images/hero_bg_4.jpeg"></div>
-    </div>
     <div className="rn-slider-area">
-      <div className="slide slider-style-1 with-square-box">
+      <div className="slide slider-style-1 with-square-box"> 
+      <div className="cs-ripple" ></div>
         <div className="container">
           <div className="row row--30 align-items-center">
             <div className="order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
@@ -21,7 +19,7 @@ function Slider() {
                 <div className="inner">
                   <span className="subtitle">Welcome to my world</span>
                   <h1 className="title">
-                    Hi, I’m <span>Douglas</span>
+                    Hi, I’m <span className="animate-charcter">Douglas</span><img className="hi-hand" src="/assets/images/hi.png" />
                     <br />
                     <span className="span">Fullstack Engineer</span>
                   </h1>

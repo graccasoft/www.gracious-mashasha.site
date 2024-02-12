@@ -47,23 +47,23 @@ function Resume() {
           "As a smart contract and dApp developer, I design, code, and deploy secure and efficient smart contracts for various use cases. I also integrate them with existing DeFi protocols and platforms, and build user-friendly dApps that enable token swaps, staking, and voting. I stay updated on the latest Web3 technologies and trends, and explore novel approaches to token engineering and mechanism design. I also engage with the crypto and DeFi community, and participate in forums, conferences, and meetups. I provide technical support and guidance to users.",
       },
       {
-        name: "Fullstack Blockchain Developer",
+        name: "Web 3.0 Developer",
         grade: "3 mon",
         org: "Swapps Finance",
-        years: "Sep 2021 - Dec 2021",
+        years: "Oct 2021 - Dec 2021",
         description:
           "In my work, I focus on three main areas. Firstly, I design, develop, and deploy secure and efficient smart contracts on blockchain networks, ensuring their correctness and integrating token swap functionality. Secondly, I build decentralized applications (dApps) that interact with these blockchain networks. This involves integrating token swap features and working closely with front-end developers to create user-friendly interfaces. Lastly, I manage liquidity pools for token swaps, optimising the provision and utilisation of liquidity, and monitoring the health of these liquidity pools. This comprehensive approach allows me to provide a seamless and secure experience for users interacting with blockchain technology.",
       },
       {
-        name: "Fullstack Engineer",
+        name: "Senior Software Developer",
         grade: "3 yrs",
-        org: "Inbox Group",
+        org: "Inbox Group AI",
         years: "Jul 2018 - Sept 2021",
         description:
           "As a developer, I create features with React.js, manage databases, implement DevOps, and build mobile apps. I also lead teams, coordinate projects, and provide feedback. I strive for robustness, usability, and reliability in all my work.",
       },
       {
-        name: "Principal Software Engineer",
+        name: "Software Developer",
         grade: "5 yrs",
         org: "Appdev (Pvt) Ltd",
         years: "Jan 2013 - Jul 2018",
@@ -74,7 +74,7 @@ function Resume() {
         name: "Graphic & Web Designer",
         grade: "4 mon",
         org: "Pixelus Design Lab",
-        years: "Sep 2012 - Dec 2012",
+        years: "Aug 2012 - Dec 2012",
         description:
           "I design websites, online and desktop apps, assess setup requirements, and implement solutions. I train teams in Adobe CS, win clients with high-quality design work, train clients in website maintenance, and initiated an ISP changeover.",
       },
@@ -101,40 +101,7 @@ function Resume() {
           </div>
           <div className="row mt--45">
             <div className="col-lg-12">
-              <ul
-                className="rn-nav-list nav nav-tabs"
-                id="myTabs"
-                role="tablist"
-              >
-                <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    id="education-tab"
-                    data-bs-toggle="tab"
-                    href="#education"
-                    role="tab"
-                    aria-controls="education"
-                    aria-selected="true"
-                  >
-                    education
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link"
-                    id="professional-tab"
-                    data-bs-toggle="tab"
-                    href="#professional"
-                    role="tab"
-                    aria-controls="professional"
-                    aria-selected="false"
-                  >
-                    professional Skills
-                  </a>
-                </li>
-                <li className="nav-item"></li>
-                <li className="nav-item"></li>
-              </ul>
+
               {/* Start Tab Content Wrapper  */}
               <div className="rn-nav-content tab-content" id="myTabContents">
                 {/* Start Single Tab  */}
@@ -150,8 +117,8 @@ function Resume() {
                       <div className="col-lg-3 col-md-12 col-12"></div>
                       <div className="col-lg-6 col-md-12 col-12">
                         <div className="content">
-                          <span className="subtitle">2005 - 2024</span>
-                          <h4 className="maintitle">Education </h4>
+                          <span className="subtitle text-center">2005 - 2024</span>
+                          <h4 className="maintitle text-center">Education </h4>
                           <div className="experience-list">
                             {/* Start Single List  */}
                             {education.map(
@@ -195,7 +162,7 @@ function Resume() {
 
                 {/* Start Single Tab  */}
                 <div
-                  className="tab-pane fade single-tab-area"
+                  className="tab-pane fade active show single-tab-area mt--100"
                   id="professional"
                   role="tabpanel"
                   aria-labelledby="professional-tab"
@@ -206,8 +173,8 @@ function Resume() {
                       <div className="col-lg-3 col-md-12 col-12"></div>
                       <div className="col-lg-6 col-md-12 col-12">
                         <div className="content">
-                          <span className="subtitle">2012 - 2024</span>
-                          <h4 className="maintitle">
+                          <span className="subtitle text-center">2012 - 2024</span>
+                          <h4 className="maintitle text-center">
                             Professional Experience{" "}
                           </h4>
                           <div className="experience-list">
