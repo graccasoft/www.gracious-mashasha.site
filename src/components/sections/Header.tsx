@@ -75,30 +75,11 @@ function Header() {
               </nav>
               {/* Start Header Right  */}
               <div className="header-right">
-
-                <div className="hamberger-menu d-block d-xl-none">
-                  <FeatherIcon icon="menu" className="humberger-menu" />
-                </div>
-                <div className="close-menu d-block">
-                  <span className="closeTrigger">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="feather feather-x"
-                    >
-                      <line x1={18} y1={6} x2={6} y2={18} />
-                      <line x1={6} y1={6} x2={18} y2={18} />
-                    </svg>
-                  </span>
-                </div>
-              </div>
+                            <a className="rn-btn" target="_blank" href="/resume.pdf"><span>GET RESUME</span></a>
+                            <div className="hamberger-menu d-block d-xl-none">
+                                <i id="menuBtn" className="feather-menu humberger-menu"></i>
+                            </div>
+                        </div>
               {/* End Header Right  */}
             </div>
           </div>
