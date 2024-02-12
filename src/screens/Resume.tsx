@@ -7,11 +7,11 @@ import Footer from '../components/sections/Footer';
 function Resume() {
   return (
     <>
-  <Header />
-  <MobileMenu />
-  <MainWrapper />
-  <Footer />
-</>
+      <Header />
+      <MobileMenu />
+      <MainWrapper />
+      <Footer />
+    </>
 
   );
 }

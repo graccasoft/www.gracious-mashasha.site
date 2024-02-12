@@ -11,17 +11,17 @@ import Contacts from "../main/Contacts";
 function MainWrapper() {
   return <>
     {/* Start Main Page Wrapper */}
-  <main className="main-page-wrapper">
-    <Slider />
-    <Services />
-    <Portfolio />
-    <Resume />
-    <Testimonial />
-    <Tech />
-    <Blog />
-    <Contacts />
-  </main>
-  {/* End Main Page Wrapper */}
+    <main className="main-page-wrapper">
+      <Slider />
+      <Services />
+      <Portfolio />
+      <Resume />
+      <Testimonial />
+      <Tech />
+      <Blog />
+      <Contacts />
+    </main>
+    {/* End Main Page Wrapper */}
   </>;
 }
 

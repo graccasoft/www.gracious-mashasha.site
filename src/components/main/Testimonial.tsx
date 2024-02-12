@@ -55,7 +55,7 @@ function Testimonial() {
       {
         name: "Thomas K. Heller",
         title: "CTO",
-        text: "Douglas, your work on the token development and token swap website project was truly remarkable. In just three months, you managed to design and implement a robust token system, and a user-friendly token swap website. Your understanding of blockchain technology and smart contracts was clearly demonstrated in the seamless operation of the token system. The website you developed not only had an intuitive interface, but also ensured secure and efficient token swaps. Your ability to deliver such a complex project in a short time frame speaks volumes about your skills, dedication, and work ethic. Your contributions were invaluable to the success of the project. You are indeed a top-tier blockchain developer.",
+        text: "Douglas, your work on the token development and token swap website project was truly remarkable. In just three months, you managed to design and implement a robust token system, and a user-friendly token swap website. Your understanding of blockchain technology and smart contracts was clearly demonstrated in the seamless operation of the token system. Your ability to deliver such a complex project in a short time frame speaks volumes about your skills, dedication, and work ethic.",
         thumbnail: "https://img.freepik.com/premium-vector/empty-face-icon-avatar-with-black-hair-vector-illustration_601298-13402.jpg",
         service: "DEX Development",
         date: "April 2022",

@@ -34,14 +34,14 @@ function Services() {
             <div className="rn-service">
               <div className="inner">
                 <div className="icon">
-                <img src="/assets/images/uiux.png" width="72" />
+                  <img src="/assets/images/uiux.png" width="72" />
                 </div>
                 <div className="content">
                   <h4 className="title">
                     <a href="#">UI/UX</a>
                   </h4>
                   <p className="description">
-                  I specialize in creating intuitive, user-friendly interfaces that engage users and enhance their experience, using the latest design principles and techniques.
+                    I specialize in creating intuitive, user-friendly interfaces that engage users and enhance their experience, using the latest design principles and techniques.
                   </p>
                   <a className="read-more-button" href="#">
                     <i className="feather-arrow-right" />
@@ -63,14 +63,14 @@ function Services() {
             <div className="rn-service">
               <div className="inner">
                 <div className="icon">
-                <img src="/assets/images/frontend.png" width="72" />
+                  <img src="/assets/images/frontend.png" width="72" />
                 </div>
                 <div className="content">
                   <h4 className="title">
                     <a href="#">Frontend Development</a>
                   </h4>
                   <p className="description">
-                  I build fast, responsive web and mobile apps using the latest technologies, ensuring optimal performance and a seamless user experience on all devices.
+                    I build fast, responsive web and mobile apps using the latest technologies, ensuring optimal performance and a seamless user experience on all devices.
                   </p>
                   <a className="read-more-button" href="#">
                     <i className="feather-arrow-right" />
@@ -92,14 +92,14 @@ function Services() {
             <div className="rn-service">
               <div className="inner">
                 <div className="icon">
-                <img src="/assets/images/backend.png" width="72" />
+                  <img src="/assets/images/backend.png" width="72" />
                 </div>
                 <div className="content">
                   <h4 className="title">
                     <a href="#">Backend Development</a>
                   </h4>
                   <p className="description">
-                  I develop robust server-side logic to power dynamic web applications, ensuring high performance and reliability for your website’s functionality.
+                    I develop robust server-side logic to power dynamic web applications, ensuring high performance and reliability for your website’s functionality.
                   </p>
                   <a className="read-more-button" href="#">
                     <i className="feather-arrow-right" />
@@ -121,14 +121,14 @@ function Services() {
             <div className="rn-service">
               <div className="inner">
                 <div className="icon">
-                <img src="/assets/images/database.png" width="72" />
+                  <img src="/assets/images/database.png" width="72" />
                 </div>
                 <div className="content">
                   <h4 className="title">
                     <a href="#">Database Engineering</a>
                   </h4>
                   <p className="description">
-                  Our database engineering services encompass the design, implementation, and optimization of high-performance database architectures to handle your application's data effectively. </p>
+                    Our database engineering services encompass the design, implementation, and optimization of high-performance database architectures to handle your application's data effectively. </p>
                   <a className="read-more-button" href="#">
                     <i className="feather-arrow-right" />
                   </a>
@@ -149,14 +149,14 @@ function Services() {
             <div className="rn-service">
               <div className="inner">
                 <div className="icon">
-                <img src="/assets/images/devops.png" width="72" />
+                  <img src="/assets/images/devops.png" width="72" />
                 </div>
                 <div className="content">
                   <h4 className="title">
                     <a href="#">DevOps</a>
                   </h4>
                   <p className="description">
-                  I streamline operations, development and testing processes using a CI/CD Pipeline to ensure faster, more reliable software delivery, improving efficiency and reducing downtime.
+                    I streamline operations, development and testing processes using a CI/CD Pipeline to ensure faster, more reliable software delivery, improving efficiency and reducing downtime.
                   </p>
                   <a className="read-more-button" href="#">
                     <i className="feather-arrow-right" />
@@ -178,14 +178,14 @@ function Services() {
             <div className="rn-service">
               <div className="inner">
                 <div className="icon">
-                <img src="/assets/images/blockchain.png" width="72" />
+                  <img src="/assets/images/blockchain.png" width="72" />
                 </div>
                 <div className="content">
                   <h4 className="title">
                     <a href="#">Blockchain Engineering</a>
                   </h4>
                   <p className="description">
-                  I design smart contracts to implement secure, decentralized solutions using blockchain technology, providing transparency and security for your digital transactions.
+                    I design smart contracts to implement secure, decentralized solutions using blockchain technology, providing transparency and security for your digital transactions.
                   </p>
                   <a className="read-more-button" href="#">
                     <i className="feather-arrow-right" />

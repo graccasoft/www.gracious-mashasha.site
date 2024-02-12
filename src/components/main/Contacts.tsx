@@ -3,10 +3,10 @@ import Swal from 'sweetalert2'
 import emailjs from 'emailjs-com';
 
 function Contacts() {
-  
-  const form:any = useRef();
 
-  const sendEmail = (e:any) => {
+  const form: any = useRef();
+
+  const sendEmail = (e: any) => {
 
     Swal.showLoading();
 
@@ -50,8 +50,8 @@ function Contacts() {
           <div className="row">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <span className="subtitle">Contact</span>
-                <h2 className="title">Contact With Me</h2>
+                <span className="subtitle">Get in touch with me</span>
+                <h2 className="title">Contact Me</h2>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ function Contacts() {
                 <div className="row">
                   <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
                     <div className="social-share-inner-left">
-                      <span className="title">find me on</span>
+                      <span className="title">Follow me on</span>
                       <ul className="social-share d-flex liststyle">
                         <li className="linkedin mr--25">
                           <a
@@ -98,9 +98,17 @@ function Contacts() {
                             <img src="/assets/images/twitter.png" width="36" />
                           </a>
                         </li>
-                        <li className="github">
+                        <li className="github mr--25">
                           <a
                             href="https://github.com/the-code-writer"
+                            target="_blank"
+                          >
+                            <img src="/assets/images/github.png" width="36" />
+                          </a>
+                        </li>
+                        <li className="github">
+                          <a
+                            href="https://medium.com/@doug.maposa"
                             target="_blank"
                           >
                             <img src="/assets/images/github.png" width="36" />

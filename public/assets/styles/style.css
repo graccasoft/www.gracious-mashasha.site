@@ -10957,9 +10957,6 @@ xclip
     scroll-behavior: auto;
   }
 }
-body.template-color-1 {
-  background-color: #1e2022;
-}
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -19708,7 +19705,11 @@ body.white-version .rn-btn-ulderline {
 
 .logo a img {
   transition: 0.3s;
-  max-height: 64px;
+  max-height: 100px;
+}
+
+body.template-color-1 {
+  background-color: #191b1e;
 }
 
 .cs-hero_bg.cs-bg.cs-ripple_version.cs-center {
@@ -19723,9 +19724,19 @@ body.white-version .rn-btn-ulderline {
   backdrop-filter: blur(15px);
 }
 
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  color: #fbff3a;
+}
+
 #tsparticles {
   mix-blend-mode: color-dodge;
-  z-index: 12343 !important;
+  z-index: -1 !important;
   display: block;
   width: 100vw;
   height: 100%;
@@ -19735,12 +19746,23 @@ body.white-version .rn-btn-ulderline {
   opacity: 0.4;
 }
 
-.swiper-button-prev:after, .swiper-button-next:after {
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  font-variant: initial;
-  line-height: 1;
-  color: #fbff3a;
+canvas{
+  z-index: 2 !important;
+}
+
+.mainmenu-nav .primary-menu li a {
+  color: var(--color-lightn);
+  position: relative;
+  transition: var(--transition);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  
+}
+
+.footer-area .logo a img {
+  max-height: 200px;
 }

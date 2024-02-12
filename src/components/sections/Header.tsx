@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <>
-      
+
       {/* Start Header */}
       <header className="rn-header haeder-default black-logo-version header--fixed header--sticky sticky">
         <div className="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
@@ -75,13 +75,7 @@ function Header() {
               </nav>
               {/* Start Header Right  */}
               <div className="header-right">
-                <a
-                  className="rn-btn"
-                  target="_blank"
-                  href="https://themeforest.net/checkout/from_item/33188244?license=regular"
-                >
-                  <span>BUY NOW</span>
-                </a>
+
                 <div className="hamberger-menu d-block d-xl-none">
                   <i id="menuBtn" className="feather-menu humberger-menu" />
                 </div>

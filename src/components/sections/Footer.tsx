@@ -11,11 +11,16 @@ function Footer() {
               <div className="footer-area text-center">
                 <div className="logo">
                   <a href="#top">
+                    <img src="/assets/images/banner-03.png" alt="my avatar" style={{borderRadius: "100%", width: 120}} />
+                  </a>
+                </div>
+                <div className="logo">
+                  <a href="#top">
                     <img src="/assets/images/logo-vertical.png" alt="logo" />
                   </a>
                 </div>
                 <p className="description mt--30">
-                  © 2024. All rights reserved. 
+                  © 2024. All rights reserved.
                   <a rel="noreferer" target="_blank" href="https://www.linkedin.com/in/douglasmaposa/" >
                     {" "}Douglas Maposa
                   </a>

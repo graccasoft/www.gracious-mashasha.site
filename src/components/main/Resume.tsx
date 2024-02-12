@@ -4,9 +4,9 @@ function Resume() {
 
   const [education, setEducation] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    const courses:any = [
+    const courses: any = [
       {
         name: "Master's Degree in Computer Science : (MC-CS) STUDENT",
         grade: "...",
@@ -32,55 +32,55 @@ function Resume() {
 
     setEducation(courses);
 
-    
-  },[])
+
+  }, [])
 
   const [professional, setProfessional] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    const jobs:any = [
+    const jobs: any = [
       {
         name: "Fullstack Web3.0 Engineer",
         grade: "2 yrs",
         org: "Dovellous Technologies",
         years: "Nov 2021 - Present",
         description: "As a smart contract and dApp developer, I design, code, and deploy secure and efficient smart contracts for various use cases. I also integrate them with existing DeFi protocols and platforms, and build user-friendly dApps that enable token swaps, staking, and voting. I stay updated on the latest Web3 technologies and trends, and explore novel approaches to token engineering and mechanism design. I also engage with the crypto and DeFi community, and participate in forums, conferences, and meetups. I provide technical support and guidance to users."
-      }, 
+      },
       {
         name: "Fullstack Blockchain Developer",
         grade: "3 mon",
         org: "Swapps Finance",
         years: "Sep 2021 - Dec 2021",
         description: "In my work, I focus on three main areas. Firstly, I design, develop, and deploy secure and efficient smart contracts on blockchain networks, ensuring their correctness and integrating token swap functionality. Secondly, I build decentralized applications (dApps) that interact with these blockchain networks. This involves integrating token swap features and working closely with front-end developers to create user-friendly interfaces. Lastly, I manage liquidity pools for token swaps, optimising the provision and utilisation of liquidity, and monitoring the health of these liquidity pools. This comprehensive approach allows me to provide a seamless and secure experience for users interacting with blockchain technology."
-      }, 
+      },
       {
         name: "Fullstack Engineer",
         grade: "3 yrs",
         org: "Inbox Group",
         years: "Jul 2018 - Sept 2021",
         description: "As a developer, I create features with React.js, manage databases, implement DevOps, and build mobile apps. I also lead teams, coordinate projects, and provide feedback. I strive for robustness, usability, and reliability in all my work."
-      }, 
+      },
       {
         name: "Principal Software Engineer",
         grade: "5 yrs",
         org: "Appdev (Pvt) Ltd",
         years: "Jan 2013 - Jul 2018",
         description: "I lead a team of developers, manage projects, create UI prototypes, develop UI/UX, and handle frontend and backend systems. I’m involved in the product lifecycle, deploy apps on cloud services, and guide UI/UX trends."
-      }, 
+      },
       {
         name: "Graphic & Web Designer",
         grade: "4 mon",
         org: "Pixelus Design Lab",
         years: "Sep 2012 - Dec 2012",
         description: "I design websites, online and desktop apps, assess setup requirements, and implement solutions. I train teams in Adobe CS, win clients with high-quality design work, train clients in website maintenance, and initiated an ISP changeover."
-      }, 
+      },
     ]
 
     setProfessional(jobs);
 
-    
-  },[])
+
+  }, [])
 
   return <>
     {/* Start Resume Area */}
@@ -141,7 +141,7 @@ function Resume() {
               >
                 <div className="personal-experience-inner mt--40">
                   <div className="row">
-                    
+
                     {/* Start Skill List Area  */}
                     <div className="col-lg-3 col-md-12 col-12"></div>
                     <div className="col-lg-6 col-md-12 col-12">
@@ -149,25 +149,25 @@ function Resume() {
                         <span className="subtitle">2005 - 2024</span>
                         <h4 className="maintitle">Education </h4>
                         <div className="experience-list">
-                          { education.map((course:any, courseIndex:number)=>(
+                          {education.map((course: any, courseIndex: number) => (
                             <>
-                          {/* Start Single List  */}
-                          <div key={courseIndex} className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>{course.name}</h4>
-                                  <span>{course.college} ⚪ {course.years}</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>{course.grade}</span>
+                              {/* Start Single List  */}
+                              <div key={courseIndex} className="resume-single-list">
+                                <div className="inner">
+                                  <div className="heading">
+                                    <div className="title">
+                                      <h4>{course.name}</h4>
+                                      <span>{course.college} ⚪ {course.years}</span>
+                                    </div>
+                                    <div className="date-of-time">
+                                      <span>{course.grade}</span>
+                                    </div>
+                                  </div>
+                                  <p className="description" dangerouslySetInnerHTML={{ __html: course.description }}></p>
                                 </div>
                               </div>
-                              <p className="description" dangerouslySetInnerHTML={{__html: course.description}}></p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          </>
+                              {/* End Single List  */}
+                            </>
                           ))}
                         </div>
                       </div>
@@ -188,7 +188,7 @@ function Resume() {
               >
                 <div className="personal-experience-inner mt--40">
                   <div className="row">
-                    
+
                     {/* Start Skill List Area  */}
                     <div className="col-lg-3 col-md-12 col-12"></div>
                     <div className="col-lg-6 col-md-12 col-12">
@@ -196,25 +196,25 @@ function Resume() {
                         <span className="subtitle">2012 - 2024</span>
                         <h4 className="maintitle">Professional Experience </h4>
                         <div className="experience-list">
-                          { professional.map((job:any, jobIndex:number)=>(
+                          {professional.map((job: any, jobIndex: number) => (
                             <>
-                          {/* Start Single List  */}
-                          <div key={jobIndex} className="resume-single-list">
-                            <div className="inner">
-                              <div className="heading">
-                                <div className="title">
-                                  <h4>{job.name}</h4>
-                                  <span>{job.org} ⚪ {job.years}</span>
-                                </div>
-                                <div className="date-of-time">
-                                  <span>{job.grade}</span>
+                              {/* Start Single List  */}
+                              <div key={jobIndex} className="resume-single-list">
+                                <div className="inner">
+                                  <div className="heading">
+                                    <div className="title">
+                                      <h4>{job.name}</h4>
+                                      <span>{job.org} ⚪ {job.years}</span>
+                                    </div>
+                                    <div className="date-of-time">
+                                      <span>{job.grade}</span>
+                                    </div>
+                                  </div>
+                                  <p className="description" dangerouslySetInnerHTML={{ __html: job.description }}></p>
                                 </div>
                               </div>
-                              <p className="description" dangerouslySetInnerHTML={{__html: job.description}}></p>
-                            </div>
-                          </div>
-                          {/* End Single List  */}
-                          </>
+                              {/* End Single List  */}
+                            </>
                           ))}
                         </div>
                       </div>

@@ -1,6 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Blog() {
+
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+
+    const articles: any = [
+      {
+        title: "Unveiling My Icon",
+        image: "/assets/images/logo.png",
+        category: "2 mon ago",
+        min: 3,
+        url: "https://medium.com/@doug.maposa/awakening-creativity-beyond-imagination-unveiling-my-icon-2e2fee67a902"
+      },
+      {
+        title: "My Journey as a Dev",
+        image: "/assets/images/skills.webp",
+        category: "Last week",
+        min: 14,
+        url: "https://medium.com/@doug.maposa/my-journey-from-graphic-design-to-web3-development-23032aaeadd6"
+      },
+      {
+        title: "ZK Protocols on Blockchain",
+        image: "/assets/images/zk.webp",
+        category: "3 days ago",
+        min: 3,
+        url: "https://medium.com/@doug.maposa/zk-rollups-and-the-blockchain-4a01fd5c24f4"
+      },
+
+    ];
+
+    setBlogs(articles);
+
+  }, [])
+
+
   return <>
     {/* Start News Area */}
     <div className="rn-blog-area rn-section-gap section-separator" id="blog">
@@ -15,145 +50,59 @@ function Blog() {
               className="section-title text-center aos-init aos-animate"
             >
               <span className="subtitle">
-                Visit my blog and keep your feedback
+                Visit my blog and give feedback
               </span>
               <h2 className="title">My Blog</h2>
             </div>
           </div>
         </div>
         <div className="row row--25 mt--30 mt_md--10 mt_sm--10">
-          {/* Start Single blog */}
-          <div
-            data-aos="fade-up"
-            data-aos-duration={500}
-            data-aos-delay={100}
-            data-aos-once="true"
-            className="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 aos-init aos-animate"
-          >
-            <div
-              className="rn-blog"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModalCenters"
-            >
-              <div className="inner">
-                <div className="thumbnail">
-                  <a href="#">
-                    <img
-                      src="/assets/images/blog-01.jpg"
-                      alt="Personal Portfolio Images"
-                    />
-                  </a>
-                </div>
-                <div className="content">
-                  <div className="category-info">
-                    <div className="category-list">
-                      <a href="#">Canada</a>
+          {blogs.map((blog: any, blogIndex: number) => (
+            <>
+              {/* Start Single blog */}
+              <div
+                data-aos="fade-up"
+                data-aos-duration={500}
+                data-aos-delay={100}
+                data-aos-once="true"
+                className="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 aos-init aos-animate"
+              >
+                <div
+                  className="rn-blog"
+                >
+                  <div className="inner">
+                    <div className="thumbnail">
+                      <a href={blog.url}>
+                        <img
+                          src={blog.image}
+                          alt={blog.title}
+                        />
+                      </a>
                     </div>
-                    <div className="meta">
-                      <span>
-                        <i className="feather-clock" /> 2 min read
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className="title">
-                    <a href="#">
-                      T-shirt design is the part of design
-                      <i className="feather-arrow-up-right" />
-                    </a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* End Single blog */}
-          {/* Start Single blog */}
-          <div
-            data-aos="fade-up"
-            data-aos-duration={500}
-            data-aos-delay={150}
-            data-aos-once="true"
-            className="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 aos-init aos-animate"
-          >
-            <div
-              className="rn-blog"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModalCenters"
-            >
-              <div className="inner">
-                <div className="thumbnail">
-                  <a href="#">
-                    <img
-                      src="/assets/images/blog-02.jpg"
-                      alt="Personal Portfolio Images"
-                    />
-                  </a>
-                </div>
-                <div className="content">
-                  <div className="category-info">
-                    <div className="category-list">
-                      <a href="#">Development</a>
-                    </div>
-                    <div className="meta">
-                      <span>
-                        <i className="feather-clock" /> 2 hour read
-                      </span>
+                    <div className="content">
+                      <div className="category-info">
+                        <div className="category-list">
+                          <a href={blog.url}>{blog.category}</a>
+                        </div>
+                        <div className="meta">
+                          <span>
+                            <i className="feather-clock" /> {blog.min} min read
+                          </span>
+                        </div>
+                      </div>
+                      <h4 className="title">
+                        <a href={blog.url}>
+                          {blog.title}
+                          <i className="feather-arrow-up-right" />
+                        </a>
+                      </h4>
                     </div>
                   </div>
-                  <h4 className="title">
-                    <a href="#">
-                      The services provide for design
-                      <i className="feather-arrow-up-right" />
-                    </a>
-                  </h4>
                 </div>
               </div>
-            </div>
-          </div>
-          {/* End Single blog */}
-          {/* Start Single blog */}
-          <div
-            data-aos="fade-up"
-            data-aos-duration={500}
-            data-aos-delay={200}
-            data-aos-once="true"
-            className="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 aos-init aos-animate"
-          >
-            <div
-              className="rn-blog"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModalCenters"
-            >
-              <div className="inner">
-                <div className="thumbnail">
-                  <a href="#">
-                    <img
-                      src="/assets/images/blog-03.jpg"
-                      alt="Personal Portfolio Images"
-                    />
-                  </a>
-                </div>
-                <div className="content">
-                  <div className="category-info">
-                    <div className="category-list">
-                      <a href="#">Application</a>
-                    </div>
-                    <div className="meta">
-                      <span>
-                        <i className="feather-clock" /> 5 min read
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className="title">
-                    <a href="#">
-                      Mobile app landing design &amp; app maintain
-                      <i className="feather-arrow-up-right" />
-                    </a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* End Single blog */}
+              {/* End Single blog */}
+            </>
+          ))}
         </div>
       </div>
     </div>

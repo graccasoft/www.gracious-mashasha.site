@@ -2,11 +2,11 @@ import React from "react";
 
 function Slider() {
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
 
     (window as any).initRipples();
 
-  },[])
+  }, [])
   return <>
     {/* Start Slider Area */}
     <div className="cs-hero cs-style1 cs-type2" id="home">
@@ -27,14 +27,14 @@ function Slider() {
                   </h1>
                   <div>
                     <p className="description">
-                    As a full-stack engineer with over 12 years of experience, I have mastered the art and science of creating engaging and intelligent digital solutions. From prototyping to UI/UX design, from machine learning to artificial intelligence, and from frontend to backend development, I have the skills and knowledge to handle challenges. I apply design thinking and emotional intelligence to manage projects and teams effectively and efficiently, ensuring a smooth and successful software development life cycle.
+                      As a full-stack engineer with over 10 years of experience, I have mastered the art and science of creating engaging and intelligent digital solutions. From prototyping to UI/UX design, frontend and backend development and from machine learning to artificial intelligence. I have the skills and knowledge to handle technical challenges. I use agile, scrum, kanban, design thinking and emotional intelligence to manage projects and teams effectively and efficiently, ensuring a smooth and successful software development life cycle.
                     </p>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
                     <div className="social-share-inner-left">
-                      <span className="title">find me on</span>
+                      <span className="title">Follow me on</span>
                       <ul className="social-share d-flex liststyle">
                         <li className="linkedin">
                           <a href="https://www.linkedin.com/in/douglasmaposa" target="_blank">
@@ -43,12 +43,12 @@ function Slider() {
                         </li>
                         <li className="twitter">
                           <a href="https://twitter.com/code_writer" target="_blank">
-                          <img src="/assets/images/twitter.png" width="36" />
+                            <img src="/assets/images/twitter.png" width="36" />
                           </a>
                         </li>
                         <li className="github">
                           <a href="https://github.com/the-code-writer" target="_blank">
-                          <img src="/assets/images/github.png" width="36" />
+                            <img src="/assets/images/github.png" width="36" />
                           </a>
                         </li>
                       </ul>
@@ -56,14 +56,8 @@ function Slider() {
                   </div>
                   <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
                     <div className="skill-share-inner">
-                      <span className="title">best skill on</span>
+                      <span className="title">Good skills in</span>
                       <ul className="skill-share d-flex liststyle">
-                        <li>
-                          <img
-                            src="/assets/images/node.png"
-                            alt="personal Portfolio Images"
-                          />
-                        </li>
                         <li>
                           <img
                             src="/assets/images/figma.png"
@@ -73,6 +67,12 @@ function Slider() {
                         <li>
                           <img
                             src="/assets/images/react.png"
+                            alt="personal Portfolio Images"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="/assets/images/node.png"
                             alt="personal Portfolio Images"
                           />
                         </li>
@@ -89,7 +89,7 @@ function Slider() {
               </div>
             </div>
             <div className="order-1 order-lg-2 col-lg-5 position-relative">
-              <a id="play-video" className="video-play-button" href="#" style={{opacity: 0}}>
+              <a id="play-video" className="video-play-button" href="#" style={{ opacity: 0 }}>
                 <span />
               </a>
               <div className="thumbnail style-2">
@@ -101,7 +101,7 @@ function Slider() {
                   />
                 </div>
               </div>
-              
+
               <div id="video-overlay" className="video-overlay">
                 <a className="video-overlay-close">×</a>
               </div>
