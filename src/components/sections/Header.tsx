@@ -1,5 +1,5 @@
 import React from "react";
-
+import FeatherIcon from 'feather-icons-react';
 function Header() {
   return (
     <>
@@ -11,7 +11,7 @@ function Header() {
           <div className="col-lg-2 col-6">
             <div className="header-left">
               <div className="logo">
-                <a href="https://rainbowit.net/html/inbio/index.html">
+                <a href="/">
                   <img src="/assets/images/logo.png" alt="logo" />
                 </a>
               </div>
@@ -27,7 +27,7 @@ function Header() {
               >
                 {/* Start Mainmanu Nav */}
                 <ul className="primary-menu nav nav-pills">
-                  <li className="nav-item">
+                  <li className="nav-item current">
                     <a className="nav-link" href="#home">
                       Home
                     </a>
@@ -65,7 +65,7 @@ function Header() {
                       blog
                     </a>
                   </li>
-                  <li className="nav-item current">
+                  <li className="nav-item">
                     <a className="nav-link" href="#contacts">
                       Contacts
                     </a>
@@ -77,7 +77,7 @@ function Header() {
               <div className="header-right">
 
                 <div className="hamberger-menu d-block d-xl-none">
-                  <i id="menuBtn" className="feather-menu humberger-menu" />
+                  <FeatherIcon icon="menu" className="humberger-menu" />
                 </div>
                 <div className="close-menu d-block">
                   <span className="closeTrigger">

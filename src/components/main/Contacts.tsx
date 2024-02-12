@@ -1,41 +1,43 @@
 import React, { useEffect, useRef } from "react";
-import Swal from 'sweetalert2'
-import emailjs from 'emailjs-com';
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 
 function Contacts() {
-
   const form: any = useRef();
 
   const sendEmail = (e: any) => {
-
     Swal.showLoading();
 
     e.preventDefault();
 
     emailjs
-      .sendForm('service_50wup7o', 'template_xd110ki', form.current, 'aReJ648891wMprdJ3')
+      .sendForm(
+        "service_50wup7o",
+        "template_xd110ki",
+        form.current,
+        "aReJ648891wMprdJ3"
+      )
       .then(
         () => {
           Swal.hideLoading();
-          console.log('SUCCESS!');
+          console.log("SUCCESS!");
           Swal.fire({
             title: "Email sent!",
             text: "Thank you, your email was sent. I will get back to you soon.",
-            icon: "success"
+            icon: "success",
           });
 
           form.current.reset();
-
         },
         (error) => {
           Swal.hideLoading();
-          console.log('FAILED...', error.text);
+          console.log("FAILED...", error.text);
           Swal.fire({
             title: "Something went wrong!",
             text: "Sorry there was an error sending your email. Please check your connection and try again",
-            icon: "error"
+            icon: "error",
           });
-        },
+        }
       );
   };
 
@@ -111,7 +113,7 @@ function Contacts() {
                             href="https://medium.com/@doug.maposa"
                             target="_blank"
                           >
-                            <img src="/assets/images/github.png" width="36" />
+                            <img src="/assets/images/medium.png" width="36" />
                           </a>
                         </li>
                       </ul>
@@ -126,7 +128,8 @@ function Contacts() {
                   <form
                     className="rnt-contact-form rwt-dynamic-form row"
                     id="contact-form"
-                    ref={form} onSubmit={sendEmail}
+                    ref={form}
+                    onSubmit={sendEmail}
                   >
                     <div className="col-lg-6">
                       <div className="form-group">

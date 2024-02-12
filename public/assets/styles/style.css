@@ -94,8 +94,8 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.4s;
-  --font-primary: "Poppins", sans-serif;
-  --font-secondary: "Montserrat", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Kanit", sans-serif;
   --font-size-b1: 18px;
   --font-size-b2: 22px;
   --font-size-b3: 14px;
@@ -13906,7 +13906,7 @@ figcaption {
   stroke-width: 1 !important;
 }
 .rn-service .inner .content .title {
-  font-family: var(--color-primary);
+  font-family: 'Kanit', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
@@ -15099,7 +15099,7 @@ div#featured-project-carousel {
   left: 0;
   top: -130px;
   background: transparent;
-  background-image: url(../images/icons/quote.png);
+  background-image: url(/assets/images/quote.png);
   background-size: cover;
   z-index: -1;
   opacity: 0.5;
@@ -19757,12 +19757,18 @@ canvas{
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Kanit', sans-serif;
   
 }
 
 .footer-area .logo a img {
   max-height: 200px;
+}
+
+:root {
+  --swiper-theme-color: #bbff00 !important;
+}
+
+.swal2-html-container {
+  font-size: 1.525em !important;
 }

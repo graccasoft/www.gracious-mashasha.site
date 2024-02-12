@@ -83,55 +83,55 @@ function Portfolio() {
             </div>
           </div>
           <div className="row row--25 mt--10 mt_md--10 mt_sm--10">
+            {/* Start Single Portfolio */}
             {portfolios.map((item: any, itemIndex: number) => (
-              <>
-                {/* Start Single Portfolio */}
+              <div
+                key={`item${itemIndex}`}
+                data-aos="fade-up"
+                data-aos-delay={100}
+                data-aos-once="true"
+                className="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
+              >
                 <div
-                  key={`item${itemIndex}`}
-                  data-aos="fade-up"
-                  data-aos-delay={100}
-                  data-aos-once="true"
-                  className="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
+                  className="rn-portfolio"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModalCenter"
                 >
-                  <div
-                    className="rn-portfolio"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModalCenter"
-                  >
-                    <div className="inner">
-                      <div className="thumbnail">
-                        <a target="_blank" href={`${item.url}`}>
-                          <img
-                            src={item.thumbnail}
-                            alt="Personal Portfolio Images"
-                          />
+                  <div className="inner">
+                    <div className="thumbnail">
+                      <a target="_blank" href={`{item.url}`}>
+                        <img
+                          src={item.thumbnail}
+                          alt="Personal Portfolio Images"
+                        />
+                      </a>
+                    </div>
+                    <div className="content">
+                      <h4 className="title">
+                        <a target="_blank" href={`{item.url}`}>
+                          {item.title}
                         </a>
-                      </div>
-                      <div className="content">
-                        <h4 className="title">
-                          <a target="_blank" href={`${item.url}`}>
-                            {item.title}
+                      </h4>
+                      <div className="category-info">
+                        <div className="category-list">
+                          <a target="_blank" href={`{item.url}`}>
+                            {item.client}
                           </a>
-                        </h4>
-                        <div className="category-info">
-                          <div className="category-list">
-                            <a target="_blank" href={`${item.url}`}>
-                              {item.client}
-                            </a>
-                          </div>
                         </div>
-                        <small>
-                          <a target="_blank" href={`${item.url}`}>
-                            {item.url}
-                          </a>
-                        </small>
                       </div>
+                      {/* 
+                      <small>
+                        <a target="_blank" href={`${item.url}`}>
+                          {item.url}
+                        </a>
+                      </small>
+                      */}
                     </div>
                   </div>
                 </div>
-                {/* End Single Portfolio */}
-              </>
+              </div>
             ))}
+            {/* End Single Portfolio */}
           </div>
         </div>
       </div>

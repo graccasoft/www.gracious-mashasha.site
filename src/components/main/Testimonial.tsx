@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import FeatherIcon from 'feather-icons-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -10,6 +10,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 function Testimonial() {
+
+  const prevElRef = useRef<HTMLDivElement>(null);
+  const nextElRef = useRef<HTMLDivElement>(null);
+
   const [testmonials, setTestimonials] = useState([]);
 
   useEffect(() => {
@@ -96,6 +100,8 @@ function Testimonial() {
     setTestimonials(testmonies);
   }, []);
 
+  const [currentTestimonyIndex, setCurrentTestimonyIndex] = useState(0);
+
   return (
     <>
       {/* Start Testimonia Area  */}
@@ -116,26 +122,26 @@ function Testimonial() {
             <div className="col-lg-12">
               <div className="testimonial-activation testimonial-pb mb--30 slick-initialized slick-slider slick-dotted">
                 <button
-                  className="slide-arrow prev-arrow slick-arrow"
+                  id="#swiper-button-prev"
+                  className="slide-arrow prev-arrow slick-arrow "
                   style={{}}
                 >
-                  <i className="feather-arrow-left" />
+                  <FeatherIcon icon="arrow-left" />
                 </button>
                 {/* Start Single testiminail */}
                 <div className="slick-list draggable" style={{ height: 600 }}>
-                  <Swiper autoplay
+                  <Swiper autoplay={true}
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
+                    navigation={{ nextEl: '#swiper-button-next', prevEl: '#swiper-button-prev' }}
                     scrollbar={{ draggable: true }}
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper: any) => console.log(swiper)}
+                    onSlideChange={(swiper:any) => { setCurrentTestimonyIndex(swiper.activeIndex); }}
+                    onSwiper={(swiper: any) => { console.log(""); }}
                   >
                     {testmonials.map(
                       (testmony: any, testimonyIndex: number) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={testimonyIndex}>
                           <div className="slick-track">
                             <div
                               className="testimonial mt--50 mt_md--40 mt_sm--40 slick-slide slick-cloned"
@@ -209,73 +215,29 @@ function Testimonial() {
                 </div>
                 {/*End Single testiminail */}
                 <button
-                  className="slide-arrow next-arrow slick-arrow"
+                  id="swiper-button-next"
+                  className="slide-arrow next-arrow slick-arrow "
                   style={{}}
                 >
-                  <i className="feather-arrow-right" />
+                  <FeatherIcon icon="arrow-right" />
                 </button>
                 <ul className="slick-dots" style={{}} role="tablist">
-                  <li className="slick-active" role="presentation">
+                {testmonials.map(
+                      (testmony: any, testimonyIndex: number) => (
+                  <li key={testimonyIndex} className={`${testimonyIndex === currentTestimonyIndex ? "slick-active" : ""}`} role="presentation">
                     <button
                       type="button"
                       role="tab"
-                      id="slick-slide-control00"
-                      aria-controls="slick-slide00"
-                      aria-label="1 of 5"
+                      id={`slick-slide-control-${testimonyIndex}`}
+                      aria-controls={`slick-slide-${testimonyIndex}`}
+                      aria-label={`${testimonyIndex+1} of ${testmony.length}`}
                       tabIndex={0}
                       aria-selected="true"
                     >
                       1
                     </button>
                   </li>
-                  <li role="presentation">
-                    <button
-                      type="button"
-                      role="tab"
-                      id="slick-slide-control01"
-                      aria-controls="slick-slide01"
-                      aria-label="2 of 5"
-                      tabIndex={-1}
-                    >
-                      2
-                    </button>
-                  </li>
-                  <li role="presentation">
-                    <button
-                      type="button"
-                      role="tab"
-                      id="slick-slide-control02"
-                      aria-controls="slick-slide02"
-                      aria-label="3 of 5"
-                      tabIndex={-1}
-                    >
-                      3
-                    </button>
-                  </li>
-                  <li role="presentation">
-                    <button
-                      type="button"
-                      role="tab"
-                      id="slick-slide-control03"
-                      aria-controls="slick-slide03"
-                      aria-label="4 of 5"
-                      tabIndex={-1}
-                    >
-                      4
-                    </button>
-                  </li>
-                  <li role="presentation">
-                    <button
-                      type="button"
-                      role="tab"
-                      id="slick-slide-control04"
-                      aria-controls="slick-slide04"
-                      aria-label="5 of 5"
-                      tabIndex={-1}
-                    >
-                      5
-                    </button>
-                  </li>
+                      ))}
                 </ul>
               </div>
             </div>

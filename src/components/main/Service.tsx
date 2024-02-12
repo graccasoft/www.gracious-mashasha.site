@@ -1,5 +1,5 @@
 import React from "react";
-
+import FeatherIcon from 'feather-icons-react';
 function Services() {
   return <>
     {/* Start Service Area */}
@@ -44,7 +44,7 @@ function Services() {
                     I specialize in creating intuitive, user-friendly interfaces that engage users and enhance their experience, using the latest design principles and techniques.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i className="feather-arrow-right" />
+                    <FeatherIcon icon="arrow-right" />
                   </a>
                 </div>
               </div>
@@ -73,7 +73,7 @@ function Services() {
                     I build fast, responsive web and mobile apps using the latest technologies, ensuring optimal performance and a seamless user experience on all devices.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i className="feather-arrow-right" />
+                    <FeatherIcon icon="arrow-right" />
                   </a>
                 </div>
               </div>
@@ -102,7 +102,7 @@ function Services() {
                     I develop robust server-side logic to power dynamic web applications, ensuring high performance and reliability for your website’s functionality.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i className="feather-arrow-right" />
+                    <FeatherIcon icon="arrow-right" />
                   </a>
                 </div>
               </div>
@@ -130,7 +130,7 @@ function Services() {
                   <p className="description">
                     Our database engineering services encompass the design, implementation, and optimization of high-performance database architectures to handle your application's data effectively. </p>
                   <a className="read-more-button" href="#">
-                    <i className="feather-arrow-right" />
+                    <FeatherIcon icon="arrow-right" />
                   </a>
                 </div>
               </div>
@@ -159,7 +159,7 @@ function Services() {
                     I streamline operations, development and testing processes using a CI/CD Pipeline to ensure faster, more reliable software delivery, improving efficiency and reducing downtime.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i className="feather-arrow-right" />
+                    <FeatherIcon icon="arrow-right" />
                   </a>
                 </div>
               </div>
@@ -188,7 +188,7 @@ function Services() {
                     I design smart contracts to implement secure, decentralized solutions using blockchain technology, providing transparency and security for your digital transactions.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i className="feather-arrow-right" />
+                    <FeatherIcon icon="arrow-right" />
                   </a>
                 </div>
               </div>
