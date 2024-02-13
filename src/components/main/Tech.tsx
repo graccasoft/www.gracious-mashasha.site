@@ -356,9 +356,9 @@ function Tech() {
             id: "k8s",
           },
           {
-            icon: "/assets/images/icons/pulumi.png",
-            label: "Pulumi",
-            id: "pulumi",
+            icon: "/assets/images/icons/vercel.png",
+            label: "Vercel",
+            id: "vercel",
           },
         ],
       },
